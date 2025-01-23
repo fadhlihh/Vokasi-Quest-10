@@ -22,7 +22,7 @@ public class Pemain : MonoBehaviour
     {
         for (int index = 0; index < ListTanganPemain.Count; index++)
         { 
-        ListTanganPemain[index].EventPilihKartu.AddListener(PilihKartu);
+            ListTanganPemain[index].EventPilihKartu.AddListener(PilihKartu);
         }
     }
 
@@ -34,6 +34,13 @@ public class Pemain : MonoBehaviour
         }
     }
 
+    public void MulaiBermain()
+    {
+
+        AmbilKartuAwalan();
+        MulaiMemilihKartu();
+    }
+
     public void AmbilKartuAwalan()
     {
         Kartu kartu = ManagerKartu.AmbilKartu();
@@ -43,14 +50,6 @@ public class Pemain : MonoBehaviour
             GantiKartu(index, kartu);
         }
         
-    }
-
-    public void MulaiBermain()
-    {
-       
-        AmbilKartuAwalan();
-        MulaiMemilihKartu();
-
     }
 
     public void MulaiMemilihKartu()
@@ -182,6 +181,15 @@ public class Pemain : MonoBehaviour
 
     public void MunculkanPopUpInfo(string pesan)
     {
-        pesan = "Info apa ya? hehe";
+        PopUpInfo.SetActive(true);
+        if (AlurGame.Menang == true)
+        {
+            pesan = "Kamu Berhasil Lulus Ujian";
+        }
+        else
+        {
+            pesan = "Sayangnya Kamu Belum Lulus Ujian Ayo Latihan Lagi";        
+        }
+        TextPopUpInfo.text = pesan;
     }
 }

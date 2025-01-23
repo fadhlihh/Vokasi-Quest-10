@@ -14,7 +14,7 @@ public class TanganPemain : MonoBehaviour
     public UnityEvent<TanganPemain> EventPilihKartu;
 
 
-    public void OnMouseDown()
+    private void OnMouseDown()
     {
         EventPilihKartu.Invoke(this);
     }
