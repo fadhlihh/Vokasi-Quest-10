@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class Pemain : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class Pemain : MonoBehaviour
     {
         for (int index = 0; index < ListTanganPemain.Count; index++)
         { 
-        ListTanganPemain[index].EventPilihKartu.AddListener(PilihKartu(TanganPemain kartu));
+        ListTanganPemain[index].EventPilihKartu.AddListener(PilihKartu);
         }
     }
 
@@ -29,7 +30,7 @@ public class Pemain : MonoBehaviour
     {
         for (int index = 0; index < ListTanganPemain.Count; index++)
         {
-            ListTanganPemain[index].EventPilihKartu.RemoveListener(PilihKartu(TanganPemain kartu));
+            ListTanganPemain[index].EventPilihKartu.RemoveListener(PilihKartu);
         }
     }
 
@@ -159,16 +160,28 @@ public class Pemain : MonoBehaviour
 
     public void TukarKartu()
     {
+        for (int index = 0; index < KartuPilihan.Count; index++)
+        {
+            KartuPemain kartuPilihan = KartuPilihan[index];
+            ManagerKartu.TambahKartuBuangan(kartuPilihan.DataKartu);
+            Kartu kartuBaru = ManagerKartu.AmbilCangkulan;
 
+            int indexKartuPemain = ListTanganPemain.IndexOf(kartuPilihan);
+            GantiKartu(indexKartuPemain, kartuBaru);
+        }
     }
 
     public void SelesaiMemilihKartu()
     {
-
+        for (int index = 0; index < ListTanganPemain.Count; index++)
+        {
+            ListTanganPemain[index].SimpanKartu();
+            ListTanganPemain[index].UbahKartuDipilih(false);
+        }
     }
 
     public void MunculkanPopUpInfo(string pesan)
     {
-
+        pesan = "Info apa ya? hehe";
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class TanganPemain : MonoBehaviour
 {
-    //public Kartu DataKartu;
+    public Kartu DataKartu;
     public MeshRenderer MeshRendererKartu;
     public MeshFilter MeshFilterKartu;
     public Color WarnaNormal;
@@ -16,26 +16,29 @@ public class TanganPemain : MonoBehaviour
 
     public void OnMouseDown()
     {
-
+        EventPilihKartu.Invoke(this);
     }
 
-    //public void UpdateDataKartu(Kartu dataKartuBaru)
-    //{
-
-    //}
+    public void UpdateDataKartu(Kartu dataKartuBaru)
+    {
+        DataKartu = dataKartuBaru;
+        MeshRendererKartu.material = DataKartu.MaterialKartu;
+        MeshFilterKartu.material = DataKartu.MeshKartu;
+        KartuDipilih = false;
+    }
 
     public void PilihKartu()
     {
-
+        MeshRendererKartu.material.color = WarnaHighlight;
     }
 
     public void SimpanKartu()
     {
-
+        MeshRendererKartu.material.color = WarnaNormal;
     }
 
     public void UbahKartuDipilih(bool statusKartuDipilih)
     {
-
+        KartuDipilih = statusKartuDipilih;
     }
 }
