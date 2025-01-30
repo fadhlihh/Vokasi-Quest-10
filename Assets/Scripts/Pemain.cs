@@ -68,8 +68,10 @@ public class Pemain : MonoBehaviour
 
     public void PilihKartu(TanganPemain kartu)
     {
+        // Salah nama variable
         kartu.UbahKartuDipilih(!kartu.Kartudipilih);
 
+        // Salah nama variable
         if (kartu.kartuDipilih == true)
         {
             kartu.PilihKartu();
@@ -162,8 +164,11 @@ public class Pemain : MonoBehaviour
     {
         for (int index = 0; index < KartuPilihan.Count; index++)
         {
+            // Salah tipe kelas
             KartuPemain kartuPilihan = KartuPilihan[index];
             ManagerKartu.TambahKartuBuangan(kartuPilihan.DataKartu);
+
+            // Kurang kurung
             Kartu kartuBaru = ManagerKartu.AmbilCangkulan;
 
             int indexKartuPemain = ListTanganPemain.IndexOf(kartuPilihan);
