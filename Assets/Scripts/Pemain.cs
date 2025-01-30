@@ -44,7 +44,7 @@ public class Pemain : MonoBehaviour
     public void AmbilKartuAwalan()
     {
         // Perbaiki harusnya ini ada di dalam looping
-        
+
 
         for (int index = 0; index < ListTanganPemain.Count; index++)
         {
@@ -60,6 +60,9 @@ public class Pemain : MonoBehaviour
         {
             ListTanganPemain[index].SimpanKartu();
         }
+        ButtonBuangKartu.interactable = false;
+        ButtonKombinasi.interactable = false;
+        ButtonTambahWaktu.interactable = false;
         StartCoroutine(MunculkanPopUpInfo("Pilih Kombinasi Kartu atau Buang 1 Kartu"));
     }
 
@@ -174,6 +177,8 @@ public class Pemain : MonoBehaviour
             int indexKartuPemain = ListTanganPemain.IndexOf(kartuPilihan);
             GantiKartu(indexKartuPemain, kartuBaru);
         }
+        KartuPilihan.Clear();
+        SelesaiMemilihKartu();
     }
 
     public void SelesaiMemilihKartu()
@@ -183,6 +188,7 @@ public class Pemain : MonoBehaviour
             ListTanganPemain[index].SimpanKartu();
             ListTanganPemain[index].UbahKartuDipilih(false);
         }
+        MulaiMemilihKartu();
     }
 
     public IEnumerator MunculkanPopUpInfo(string pesan)
