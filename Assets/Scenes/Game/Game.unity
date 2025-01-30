@@ -3340,6 +3340,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1100276820}
   m_CullTransparentMesh: 1
+--- !u!1 &1122475901
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1122475903}
+  - component: {fileID: 1122475902}
+  m_Layer: 0
+  m_Name: ManagerKartu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1122475902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122475901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2533764b07cbbed479a95cadeed9737e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DatabaseKartu: {fileID: 11400000, guid: 630e8f9936a509041943b6656e2207e9, type: 2}
+  KartuBuangan: []
+  TextBanyaknyaCangkulan: {fileID: 356865157}
+--- !u!4 &1122475903
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122475901}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 955.9161, y: 295.47604, z: 1874.8966}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1230058258
 GameObject:
   m_ObjectHideFlags: 0
@@ -5273,3 +5320,4 @@ SceneRoots:
   - {fileID: 1039340045}
   - {fileID: 923287052}
   - {fileID: 597349851}
+  - {fileID: 1122475903}
