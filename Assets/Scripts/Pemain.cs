@@ -61,6 +61,10 @@ public class Pemain : MonoBehaviour
             ListTanganPemain[index].SimpanKartu();
         }
         StartCoroutine(MunculkanPopUpInfo("Pilih Kombinasi Kartu atau Buang 1 Kartu"));
+
+        ButtonBuangKartu.interactable = false;
+        ButtonKombinasi.interactable = false;
+        ButtonTambahWaktu.interactable = false;
     }
 
     public void GantiKartu(int indexKartu, Kartu kartuBaru)
@@ -159,7 +163,7 @@ public class Pemain : MonoBehaviour
     {
         AlurGame.TambahWaktu();
         TukarKartu();
-        StartCoroutine(MunculkanPopUpInfo("Kamu Makin Dekat Waktu Ujian"));
+        StartCoroutine(MunculkanPopUpInfo("Kamu Dapat Tambahan Waktu 1 Hari"));
     }
 
     public void TukarKartu()
@@ -174,6 +178,10 @@ public class Pemain : MonoBehaviour
             int indexKartuPemain = ListTanganPemain.IndexOf(kartuPilihan);
             GantiKartu(indexKartuPemain, kartuBaru);
         }
+
+        KartuPilihan.Clear();
+        SelesaiMemilihKartu();
+
     }
 
     public void SelesaiMemilihKartu()
@@ -183,6 +191,8 @@ public class Pemain : MonoBehaviour
             ListTanganPemain[index].SimpanKartu();
             ListTanganPemain[index].UbahKartuDipilih(false);
         }
+
+        MulaiMemilihKartu();
     }
 
     public IEnumerator MunculkanPopUpInfo(string pesan)
