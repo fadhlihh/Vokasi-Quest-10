@@ -44,10 +44,11 @@ public class Pemain : MonoBehaviour
     public void AmbilKartuAwalan()
     {
         // Perbaiki harusnya ini ada di dalam looping
-        Kartu kartu = ManagerKartu.AmbilKartu();
+        
 
         for (int index = 0; index < ListTanganPemain.Count; index++)
         {
+            Kartu kartu = ManagerKartu.AmbilCangkulan();
             GantiKartu(index, kartu);
         }
 
@@ -59,6 +60,7 @@ public class Pemain : MonoBehaviour
         {
             ListTanganPemain[index].SimpanKartu();
         }
+        StartCoroutine(MunculkanPopUpInfo("Pilih Kombinasi Kartu atau Buang 1 Kartu"));
     }
 
     public void GantiKartu(int indexKartu, Kartu kartuBaru)
@@ -69,10 +71,10 @@ public class Pemain : MonoBehaviour
     public void PilihKartu(TanganPemain kartu)
     {
         // Salah nama variable
-        kartu.UbahKartuDipilih(!kartu.Kartudipilih);
+        kartu.UbahKartuDipilih(!kartu.KartuDipilih);
 
         // Salah nama variable
-        if (kartu.kartuDipilih == true)
+        if (kartu.KartuDipilih == true)
         {
             kartu.PilihKartu();
             KartuPilihan.Add(kartu);
@@ -110,15 +112,13 @@ public class Pemain : MonoBehaviour
         {
             if (KartuPilihan.Count == 3)
             {
-                // Salah nama variable
-                ButtonTukarKartu.interactable = false;
+                ButtonBuangKartu.interactable = false;
                 ButtonKombinasi.interactable = true;
                 ButtonTambahWaktu.interactable = false;
             }
             else if (KartuPilihan.Count == 2)
             {
-                // Salah nama variable
-                ButtonTukarKartu.interactable = false;
+                ButtonBuangKartu.interactable = false;
                 ButtonKombinasi.interactable = false;
                 ButtonTambahWaktu.interactable = true;
             }
@@ -146,6 +146,7 @@ public class Pemain : MonoBehaviour
     {
         AlurGame.KurangiWaktu();
         TukarKartu();
+        StartCoroutine(MunculkanPopUpInfo("Kamu Makin Dekat Waktu Ujian"));
     }
 
     public void KumpulkanKombinasi()
@@ -158,18 +159,17 @@ public class Pemain : MonoBehaviour
     {
         AlurGame.TambahWaktu();
         TukarKartu();
+        StartCoroutine(MunculkanPopUpInfo("Kamu Makin Dekat Waktu Ujian"));
     }
 
     public void TukarKartu()
     {
         for (int index = 0; index < KartuPilihan.Count; index++)
         {
-            // Salah tipe kelas
-            KartuPemain kartuPilihan = KartuPilihan[index];
+            TanganPemain kartuPilihan = KartuPilihan[index];
             ManagerKartu.TambahKartuBuangan(kartuPilihan.DataKartu);
 
-            // Kurang kurung
-            Kartu kartuBaru = ManagerKartu.AmbilCangkulan;
+            Kartu kartuBaru = ManagerKartu.AmbilCangkulan();
 
             int indexKartuPemain = ListTanganPemain.IndexOf(kartuPilihan);
             GantiKartu(indexKartuPemain, kartuBaru);
@@ -185,12 +185,11 @@ public class Pemain : MonoBehaviour
         }
     }
 
-    public void MunculkanPopUpInfo(string pesan)
+    public IEnumerator MunculkanPopUpInfo(string pesan)
     {
-        // Ubah tipe fungsi ini menjadi IEnumerator
-        PopUpInfo.SetActive(true);
         TextPopUpInfo.text = pesan;
-        // Delay 5 detik
-        // Nonaktifkan PopUpInfo
+        PopUpInfo.SetActive(true);
+        yield return new WaitForSeconds(5);
+        PopUpInfo.SetActive(false);
     }
 }

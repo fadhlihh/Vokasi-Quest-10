@@ -23,7 +23,7 @@ public class TanganPemain : MonoBehaviour
     {
         DataKartu = dataKartuBaru;
         MeshRendererKartu.material = DataKartu.MaterialKartu;
-        MeshFilterKartu.material = DataKartu.MeshKartu;
+        MeshFilterKartu.mesh = DataKartu.MeshKartu;
         KartuDipilih = false;
     }
 
