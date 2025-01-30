@@ -14,7 +14,7 @@ public class ManagerKartu : MonoBehaviour
 
     public void IsiCangkulan(List<Kartu> ListKartu){
         for(int index = 0; KartuCangkulan.Count < ListKartu.Count; index++){
-            private int indexAcak = Random.Range(0, DatabaseKartu.ListKartu.Count);
+            int indexAcak = Random.Range(0, DatabaseKartu.ListKartu.Count);
             while(!KartuCangkulan.Contains(DatabaseKartu.ListKartu[indexAcak])){
                 KartuCangkulan.Push(DatabaseKartu.ListKartu[indexAcak]);
                 UpdateTextBanyaknyaCangkulan();
@@ -22,22 +22,22 @@ public class ManagerKartu : MonoBehaviour
         }
     }
 
-    public AmbilCangkulan(){
-        private Kartu kartu = KartuCangkulan.Pop();
+    public Kartu AmbilCangkulan(){
+        Kartu kartu = KartuCangkulan.Pop();
         UpdateTextBanyaknyaCangkulan();
         if(KartuCangkulan.Count <= 0){
             IsiCangkulan(KartuBuangan);
             KartuBuangan.Clear();
         }
-        return Kartu;
+        return kartu;
     }
 
     public void UpdateTextBanyaknyaCangkulan(){
-        UpdateTextBanyaknyaCangkulan.text = KartuCangkulan.Count.ToString();
+        TextBanyaknyaCangkulan.text = KartuCangkulan.Count.ToString();
     }
 
-    public void TambahKartuBuangan(Kartu){
-        TambahKartuBuangan.Add(Kartu);
+    public void TambahKartuBuangan(Kartu kartu){
+        KartuBuangan.Add(kartu);
     }
 
 }

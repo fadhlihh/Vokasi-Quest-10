@@ -48,11 +48,11 @@ public class AlurGame : MonoBehaviour
     }
 
     public void Retry(){
-        SceneManager.("SceneGame");
+        SceneManager.LoadScene("SceneGame");
     }
 
     public void MenuUtama(){
-        SceneManager.("SceneMenuUtama");
+        SceneManager.LoadScene("SceneMenuUtama");
     }
 
 }
