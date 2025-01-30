@@ -340,7 +340,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 109424012}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2033639224}
+        m_TargetAssemblyTypeName: AlurGame, Assembly-CSharp
+        m_MethodName: MenuUtama
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &109424012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1144,7 +1156,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 364731449}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2033639224}
+        m_TargetAssemblyTypeName: AlurGame, Assembly-CSharp
+        m_MethodName: Retry
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &364731449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3301,7 +3325,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1100276823}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2033639224}
+        m_TargetAssemblyTypeName: AlurGame, Assembly-CSharp
+        m_MethodName: MenuUtama
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1100276823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4542,7 +4578,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1710707499}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2033639224}
+        m_TargetAssemblyTypeName: AlurGame, Assembly-CSharp
+        m_MethodName: Retry
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1710707499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5129,6 +5177,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2033639223
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2033639225}
+  - component: {fileID: 2033639224}
+  m_Layer: 0
+  m_Name: AlurGame
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2033639224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033639223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88e155de81330364982842e4dcd67ed1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ManagerKartu: {fileID: 1122475902}
+  Pemain: {fileID: 0}
+  BanyaknyaWaktu: 5
+  TextBanyaknyaWaktu: {fileID: 567663856}
+  PanelKalah: {fileID: 2059527491}
+  PanelBerhasil: {fileID: 621270058}
+--- !u!4 &2033639225
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033639223}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 955.9161, y: 295.47604, z: 1874.8966}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2059527491
 GameObject:
   m_ObjectHideFlags: 0
@@ -5321,3 +5419,4 @@ SceneRoots:
   - {fileID: 923287052}
   - {fileID: 597349851}
   - {fileID: 1122475903}
+  - {fileID: 2033639225}
