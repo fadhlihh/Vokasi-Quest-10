@@ -21,7 +21,7 @@ public class Pemain : MonoBehaviour
     private void OnEnable()
     {
         for (int index = 0; index < ListTanganPemain.Count; index++)
-        { 
+        {
             ListTanganPemain[index].EventPilihKartu.AddListener(PilihKartu);
         }
     }
@@ -43,13 +43,14 @@ public class Pemain : MonoBehaviour
 
     public void AmbilKartuAwalan()
     {
+        // Perbaiki harusnya ini ada di dalam looping
         Kartu kartu = ManagerKartu.AmbilKartu();
-        
+
         for (int index = 0; index < ListTanganPemain.Count; index++)
         {
             GantiKartu(index, kartu);
         }
-        
+
     }
 
     public void MulaiMemilihKartu()
@@ -69,7 +70,7 @@ public class Pemain : MonoBehaviour
     {
         kartu.UbahKartuDipilih(!kartu.Kartudipilih);
 
-        if(kartu.kartuDipilih == true)
+        if (kartu.kartuDipilih == true)
         {
             kartu.PilihKartu();
             KartuPilihan.Add(kartu);
@@ -105,14 +106,16 @@ public class Pemain : MonoBehaviour
     {
         if (Skor == 10)
         {
-            if(KartuPilihan.Count == 3)
+            if (KartuPilihan.Count == 3)
             {
+                // Salah nama variable
                 ButtonTukarKartu.interactable = false;
                 ButtonKombinasi.interactable = true;
                 ButtonTambahWaktu.interactable = false;
             }
-            else if(KartuPilihan.Count == 2)
+            else if (KartuPilihan.Count == 2)
             {
+                // Salah nama variable
                 ButtonTukarKartu.interactable = false;
                 ButtonKombinasi.interactable = false;
                 ButtonTambahWaktu.interactable = true;
@@ -139,7 +142,6 @@ public class Pemain : MonoBehaviour
 
     public void BuangKartu()
     {
-        int banyakKartu = KartuPilihan.Count;
         AlurGame.KurangiWaktu();
         TukarKartu();
     }
@@ -152,7 +154,6 @@ public class Pemain : MonoBehaviour
 
     public void TambahWaktu()
     {
-        int banyakKartu = KartuPilihan.Count;
         AlurGame.TambahWaktu();
         TukarKartu();
     }
@@ -181,15 +182,10 @@ public class Pemain : MonoBehaviour
 
     public void MunculkanPopUpInfo(string pesan)
     {
+        // Ubah tipe fungsi ini menjadi IEnumerator
         PopUpInfo.SetActive(true);
-        if (AlurGame.Menang == true)
-        {
-            pesan = "Kamu Berhasil Lulus Ujian";
-        }
-        else
-        {
-            pesan = "Sayangnya Kamu Belum Lulus Ujian Ayo Latihan Lagi";        
-        }
         TextPopUpInfo.text = pesan;
+        // Delay 5 detik
+        // Nonaktifkan PopUpInfo
     }
 }
