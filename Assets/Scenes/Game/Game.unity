@@ -1599,11 +1599,23 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 584702841}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1331073010}
+        m_TargetAssemblyTypeName: Pemain, Assembly-CSharp
+        m_MethodName: TambahWaktu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &584702841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1937,11 +1949,23 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 630519910}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1331073010}
+        m_TargetAssemblyTypeName: Pemain, Assembly-CSharp
+        m_MethodName: KumpulkanKombinasi
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &630519910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3833,6 +3857,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1325602047}
   m_CullTransparentMesh: 1
+--- !u!1 &1331073009
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1331073011}
+  - component: {fileID: 1331073010}
+  m_Layer: 0
+  m_Name: Pemain
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1331073010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331073009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 613bd443dda3d444faf13d97a38fd9d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListTanganPemain:
+  - {fileID: 1301517192}
+  - {fileID: 2014365076}
+  - {fileID: 1613856083}
+  Skor: 0
+  KartuPilihan: []
+  ManagerKartu: {fileID: 1122475902}
+  AlurGame: {fileID: 2033639224}
+  ButtonBuangKartu: {fileID: 2001554019}
+  ButtonKombinasi: {fileID: 630519909}
+  ButtonTambahWaktu: {fileID: 584702840}
+  PopUpInfo: {fileID: 923287048}
+  TextPopUpInfo: {fileID: 784568110}
+--- !u!4 &1331073011
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331073009}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.2, y: 1.74, z: 0.6600001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1385690900
 GameObject:
   m_ObjectHideFlags: 0
@@ -5329,11 +5410,23 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 2001554020}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1331073010}
+        m_TargetAssemblyTypeName: Pemain, Assembly-CSharp
+        m_MethodName: BuangKartu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2001554020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5640,7 +5733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ManagerKartu: {fileID: 1122475902}
-  Pemain: {fileID: 0}
+  Pemain: {fileID: 1331073010}
   BanyaknyaWaktu: 5
   TextBanyaknyaWaktu: {fileID: 567663856}
   PanelKalah: {fileID: 2059527491}
@@ -5854,3 +5947,4 @@ SceneRoots:
   - {fileID: 1122475903}
   - {fileID: 2033639225}
   - {fileID: 1181604451}
+  - {fileID: 1331073011}
