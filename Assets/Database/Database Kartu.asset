@@ -1,0 +1,195 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05cc5f1655f6c5c4faa19a42c283119e, type: 3}
+  m_Name: Database Kartu
+  m_EditorClassIdentifier: 
+  ListKartu:
+  - Name: Hati As
+    Tipe: 0
+    Skor: 1
+    MeshKartu: {fileID: 0}
+    MaterialKartu: {fileID: 2100000, guid: 3a9f56a9714060a46b2604775f35d77c, type: 2}
+  - Name: Hati 2
+    Tipe: 0
+    Skor: 2
+    MeshKartu: {fileID: 0}
+    MaterialKartu: {fileID: 2100000, guid: d52cef2d96bda804283031ef08a429db, type: 2}
+  - Name: Hati 3
+    Tipe: 0
+    Skor: 3
+    MeshKartu: {fileID: 0}
+    MaterialKartu: {fileID: 2100000, guid: a0f60250200e7f24693995db54173737, type: 2}
+  - Name: Hati 4
+    Tipe: 0
+    Skor: 4
+    MeshKartu: {fileID: 0}
+    MaterialKartu: {fileID: 2100000, guid: 45a5324447f1b6842b029a6153e316a9, type: 2}
+  - Name: Hati 5
+    Tipe: 0
+    Skor: 5
+    MeshKartu: {fileID: 0}
+    MaterialKartu: {fileID: 2100000, guid: 09616dd4ad880184a9dccead77d9c6e2, type: 2}
+  - Name: Hati 6
+    Tipe: 0
+    Skor: 6
+    MeshKartu: {fileID: 0}
+    MaterialKartu: {fileID: 2100000, guid: bcab2c5e8782d374abd79e65f6b79408, type: 2}
+  - Name: Hati 7
+    Tipe: 0
+    Skor: 7
+    MeshKartu: {fileID: 0}
+    MaterialKartu: {fileID: 2100000, guid: aa286cf2ef7ec304da8644a2130d59ae, type: 2}
+  - Name: Hati 8
+    Tipe: 0
+    Skor: 8
+    MeshKartu: {fileID: 0}
+    MaterialKartu: {fileID: 2100000, guid: 6fcf54d37ea53b04c81336996df262cd, type: 2}
+  - Name: Hati 9
+    Tipe: 0
+    Skor: 9
+    MeshKartu: {fileID: 0}
+    MaterialKartu: {fileID: 2100000, guid: 35ff4f508c25665438db507190ff8c44, type: 2}
+  - Name: Wajik As
+    Tipe: 1
+    Skor: 1
+    MeshKartu: {fileID: 0}
+    MaterialKartu: {fileID: 2100000, guid: f0fbe328aea2d1046a8dc95e90c6faa4, type: 2}
+  - Name: Wajik 2
+    Tipe: 1
+    Skor: 2
+    MeshKartu: {fileID: 0}
+    MaterialKartu: {fileID: 2100000, guid: df5b57d63293dcc46a5af8179b9546e0, type: 2}
+  - Name: Wajik 3
+    Tipe: 1
+    Skor: 3
+    MeshKartu: {fileID: 0}
+    MaterialKartu: {fileID: 2100000, guid: 18edd2e6cdf7815469a52d1ac9ac6fe0, type: 2}
+  - Name: Wajik 4
+    Tipe: 1
+    Skor: 4
+    MeshKartu: {fileID: 0}
+    MaterialKartu: {fileID: 2100000, guid: 1f1ecbde921112242ab56c959b7b8311, type: 2}
+  - Name: Wajik 5
+    Tipe: 1
+    Skor: 5
+    MeshKartu: {fileID: 0}
+    MaterialKartu: {fileID: 2100000, guid: 987615414d762bd4a8ad6adbad5d939e, type: 2}
+  - Name: Wajik 6
+    Tipe: 1
+    Skor: 6
+    MeshKartu: {fileID: 0}
+    MaterialKartu: {fileID: 2100000, guid: 33381b265eda13e48a72e6421322f091, type: 2}
+  - Name: Wajik 7
+    Tipe: 1
+    Skor: 7
+    MeshKartu: {fileID: 0}
+    MaterialKartu: {fileID: 2100000, guid: 3cde98a8c1e0daf4eaeae5ac2ed8f8ef, type: 2}
+  - Name: Wajik 8
+    Tipe: 1
+    Skor: 8
+    MeshKartu: {fileID: 0}
+    MaterialKartu: {fileID: 2100000, guid: e3f69dd497639804ea46858240e4f109, type: 2}
+  - Name: Wajik 9
+    Tipe: 1
+    Skor: 9
+    MeshKartu: {fileID: 0}
+    MaterialKartu: {fileID: 2100000, guid: 497f663bc525ca84a852528d7a0b3563, type: 2}
+  - Name: Kriting As
+    Tipe: 2
+    Skor: 1
+    MeshKartu: {fileID: 0}
+    MaterialKartu: {fileID: 2100000, guid: e630e5ac36c327f4fb6e3a396ff17181, type: 2}
+  - Name: Kriting 2
+    Tipe: 2
+    Skor: 2
+    MeshKartu: {fileID: 0}
+    MaterialKartu: {fileID: 2100000, guid: 3dea57af02feaac4f8552460ddc05e77, type: 2}
+  - Name: Kriting 3
+    Tipe: 2
+    Skor: 3
+    MeshKartu: {fileID: 0}
+    MaterialKartu: {fileID: 2100000, guid: 1e2687bda8b47e3408b8e0828e94ff6c, type: 2}
+  - Name: Kriting 4
+    Tipe: 2
+    Skor: 4
+    MeshKartu: {fileID: 0}
+    MaterialKartu: {fileID: 2100000, guid: ec4ce247291293440976ee79220def4d, type: 2}
+  - Name: Kriting 5
+    Tipe: 2
+    Skor: 5
+    MeshKartu: {fileID: 0}
+    MaterialKartu: {fileID: 2100000, guid: 5f8fb81d93e28834e8200f99dd2ed311, type: 2}
+  - Name: Kriting 6
+    Tipe: 2
+    Skor: 6
+    MeshKartu: {fileID: 0}
+    MaterialKartu: {fileID: 2100000, guid: 3618ce4cf54a1444ca2afc5ce4531df9, type: 2}
+  - Name: Kriting 7
+    Tipe: 2
+    Skor: 7
+    MeshKartu: {fileID: 0}
+    MaterialKartu: {fileID: 2100000, guid: db2070405f259014d9b1781533836ad0, type: 2}
+  - Name: Kriting 8
+    Tipe: 2
+    Skor: 8
+    MeshKartu: {fileID: 0}
+    MaterialKartu: {fileID: 2100000, guid: b49d38d9f80d2ed4f93d4025c12baca6, type: 2}
+  - Name: Kriting 9
+    Tipe: 2
+    Skor: 9
+    MeshKartu: {fileID: 0}
+    MaterialKartu: {fileID: 2100000, guid: 81bc8b7c8ba89e94881b5806793823ad, type: 2}
+  - Name: Sekop As
+    Tipe: 3
+    Skor: 1
+    MeshKartu: {fileID: 0}
+    MaterialKartu: {fileID: 2100000, guid: f94471ad2c539c643800276d4c188e90, type: 2}
+  - Name: Sekop 2
+    Tipe: 3
+    Skor: 2
+    MeshKartu: {fileID: 0}
+    MaterialKartu: {fileID: 2100000, guid: 0cea1f60e1a90b746bc379b67d2bd6f1, type: 2}
+  - Name: Sekop 3
+    Tipe: 3
+    Skor: 3
+    MeshKartu: {fileID: 0}
+    MaterialKartu: {fileID: 2100000, guid: 8dba10d9093600c488909aec9df2f021, type: 2}
+  - Name: Sekop 4
+    Tipe: 3
+    Skor: 4
+    MeshKartu: {fileID: 0}
+    MaterialKartu: {fileID: 2100000, guid: 68edf6a3520ccf146a39510421cf5a32, type: 2}
+  - Name: Sekop 5
+    Tipe: 3
+    Skor: 5
+    MeshKartu: {fileID: 0}
+    MaterialKartu: {fileID: 2100000, guid: c28d7e4f75d07d94da6e25f6b7e0c1b7, type: 2}
+  - Name: Sekop 6
+    Tipe: 3
+    Skor: 6
+    MeshKartu: {fileID: 0}
+    MaterialKartu: {fileID: 2100000, guid: 94fef8db60a73934c830699ca923f560, type: 2}
+  - Name: Sekop 7
+    Tipe: 3
+    Skor: 7
+    MeshKartu: {fileID: 0}
+    MaterialKartu: {fileID: 2100000, guid: 385742033b320144c890b3e92ddfb9d6, type: 2}
+  - Name: Sekop 8
+    Tipe: 3
+    Skor: 8
+    MeshKartu: {fileID: 0}
+    MaterialKartu: {fileID: 2100000, guid: 38db3f9c3737df5469b4113643e36234, type: 2}
+  - Name: Sekop 9
+    Tipe: 3
+    Skor: 9
+    MeshKartu: {fileID: 0}
+    MaterialKartu: {fileID: 2100000, guid: 85acb91db90fe7a459b5f960846530c5, type: 2}
