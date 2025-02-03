@@ -43,15 +43,11 @@ public class Pemain : MonoBehaviour
 
     public void AmbilKartuAwalan()
     {
-        // Perbaiki harusnya ini ada di dalam looping
-        
-
         for (int index = 0; index < ListTanganPemain.Count; index++)
         {
             Kartu kartu = ManagerKartu.AmbilCangkulan();
             GantiKartu(index, kartu);
         }
-
     }
 
     public void MulaiMemilihKartu()
@@ -60,7 +56,12 @@ public class Pemain : MonoBehaviour
         {
             ListTanganPemain[index].SimpanKartu();
         }
+        ButtonBuangKartu.interactable = false;
+        ButtonKombinasi.interactable = false;
+        ButtonTambahWaktu.interactable = false;
+
         StartCoroutine(MunculkanPopUpInfo("Pilih Kombinasi Kartu atau Buang 1 Kartu"));
+
     }
 
     public void GantiKartu(int indexKartu, Kartu kartuBaru)
@@ -70,10 +71,7 @@ public class Pemain : MonoBehaviour
 
     public void PilihKartu(TanganPemain kartu)
     {
-        // Salah nama variable
         kartu.UbahKartuDipilih(!kartu.KartuDipilih);
-
-        // Salah nama variable
         if (kartu.KartuDipilih == true)
         {
             kartu.PilihKartu();
@@ -159,7 +157,7 @@ public class Pemain : MonoBehaviour
     {
         AlurGame.TambahWaktu();
         TukarKartu();
-        StartCoroutine(MunculkanPopUpInfo("Kamu Makin Dekat Waktu Ujian"));
+        StartCoroutine(MunculkanPopUpInfo("Kamu Dapat Tambahan Waktu 1 Hari"));
     }
 
     public void TukarKartu()
@@ -174,6 +172,10 @@ public class Pemain : MonoBehaviour
             int indexKartuPemain = ListTanganPemain.IndexOf(kartuPilihan);
             GantiKartu(indexKartuPemain, kartuBaru);
         }
+
+        KartuPilihan.Clear();
+        SelesaiMemilihKartu();
+
     }
 
     public void SelesaiMemilihKartu()
@@ -183,13 +185,15 @@ public class Pemain : MonoBehaviour
             ListTanganPemain[index].SimpanKartu();
             ListTanganPemain[index].UbahKartuDipilih(false);
         }
+
+        MulaiMemilihKartu();
     }
 
     public IEnumerator MunculkanPopUpInfo(string pesan)
     {
         TextPopUpInfo.text = pesan;
         PopUpInfo.SetActive(true);
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
         PopUpInfo.SetActive(false);
     }
 }

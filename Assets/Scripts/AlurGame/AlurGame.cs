@@ -36,7 +36,7 @@ public class AlurGame : MonoBehaviour
     }
 
     public void UpdateTextBanyaknyaWaktu(){
-        TextBanyaknyaWaktu.text = "Kesempatan: "+BanyaknyaWaktu;
+        TextBanyaknyaWaktu.text = BanyaknyaWaktu + " hari menuju ujian";
     }
 
     public void Menang(){
@@ -48,11 +48,11 @@ public class AlurGame : MonoBehaviour
     }
 
     public void Retry(){
-        SceneManager.LoadScene("SceneGame");
+        SceneManager.LoadScene("Game");
     }
 
     public void MenuUtama(){
-        SceneManager.LoadScene("SceneMenuUtama");
+        SceneManager.LoadScene("MenuUtama");
     }
 
 }
