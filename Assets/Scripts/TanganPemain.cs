@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class TanganPemain : MonoBehaviour
 {
     public Kartu DataKartu;
-    public MeshRenderer MeshRendererKartu;
+    public SkinnedMeshRenderer MeshRendererKartu;
     public MeshFilter MeshFilterKartu;
     public Color WarnaNormal;
     public Color WarnaHighlight;
