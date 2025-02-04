@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public GameObject PanelCredit;
+    public GameObject PanelCredit, PanelPanduan;
     
     public void Play()
     {
@@ -25,5 +25,15 @@ public class MainMenu : MonoBehaviour
     public void TutupKredit()
     {
         PanelCredit.SetActive(false);
+    }
+
+    public void PanduanOpen()
+    {
+        PanelPanduan.SetActive(true);
+    }
+
+    public void PanduanClose()
+    {
+        PanelPanduan.SetActive(false);
     }
 }
