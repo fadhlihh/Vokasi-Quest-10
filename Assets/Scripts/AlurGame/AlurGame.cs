@@ -44,7 +44,7 @@ public class AlurGame : MonoBehaviour
     }
 
     public void UpdateTextBanyaknyaWaktu(){
-        TextBanyaknyaWaktu.text = BanyaknyaWaktu + " hari menuju ujian";
+        TextBanyaknyaWaktu.text = BanyaknyaWaktu.ToString();
     }
 
     public void Menang(){
