@@ -60,7 +60,7 @@ public class Pemain : MonoBehaviour
         ButtonKombinasi.interactable = false;
         ButtonTambahWaktu.interactable = false;
 
-        StartCoroutine(MunculkanPopUpInfo("Pilih Kombinasi Kartu atau Buang 1 Kartu"));
+        StartCoroutine(MunculkanPopUpInfo("Pilih Kombinasi Karakter atau Buang 1 Karakter"));
 
     }
 
@@ -144,7 +144,7 @@ public class Pemain : MonoBehaviour
     {
         AlurGame.KurangiWaktu();
         TukarKartu();
-        StartCoroutine(MunculkanPopUpInfo("Kamu Makin Dekat Waktu Ujian"));
+        StartCoroutine(MunculkanPopUpInfo("Kamu Makin Dekat Waktu Uji Kompetensi"));
     }
 
     public void KumpulkanKombinasi()
