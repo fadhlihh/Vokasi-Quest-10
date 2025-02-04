@@ -193,7 +193,7 @@ public class Pemain : MonoBehaviour
     {
         TextPopUpInfo.text = pesan;
         PopUpInfo.SetActive(true);
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
         PopUpInfo.SetActive(false);
     }
 }
