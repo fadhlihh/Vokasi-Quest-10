@@ -14,6 +14,10 @@ public class AlurGame : MonoBehaviour
     public TMP_Text TextBanyaknyaWaktu;
     public GameObject PanelKalah;
     public GameObject PanelBerhasil;
+    public AudioSource EfekSuaraMenang;
+    public AudioSource EfekSuaraKalah;
+    public AudioSource EfekSuaraWaktuBertambah;
+    public AudioSource EfekSuaraWaktuBerkurang;
 
     private void Start(){
         //Menyiapkan kartu cangkulan
@@ -25,6 +29,9 @@ public class AlurGame : MonoBehaviour
     public void KurangiWaktu(){
         BanyaknyaWaktu = BanyaknyaWaktu - 1;
         UpdateTextBanyaknyaWaktu();
+        if(BanyaknyaWaktu>0){
+            EfekSuaraWaktuBerkurang.Play();
+        }
         if(BanyaknyaWaktu<=0){
             Kalah();
         }
@@ -33,6 +40,7 @@ public class AlurGame : MonoBehaviour
     public void TambahWaktu(){
         BanyaknyaWaktu = BanyaknyaWaktu + 1;
         UpdateTextBanyaknyaWaktu();
+        EfekSuaraWaktuBertambah.Play();
     }
 
     public void UpdateTextBanyaknyaWaktu(){
@@ -41,10 +49,12 @@ public class AlurGame : MonoBehaviour
 
     public void Menang(){
         PanelBerhasil.SetActive(true);
+        EfekSuaraMenang.Play();
     }
 
     public void Kalah(){
         PanelKalah.SetActive(true);
+        EfekSuaraKalah.Play();
     }
 
     public void Retry(){

@@ -17,6 +17,8 @@ public class Pemain : MonoBehaviour
     public Button ButtonTambahWaktu;
     public GameObject PopUpInfo;
     public TMP_Text TextPopUpInfo;
+    public AudioSource EfekSuaraMemilihKartu;
+    public AudioSource EfekSuaraMelepasKartu;
 
     private void OnEnable()
     {
@@ -75,11 +77,13 @@ public class Pemain : MonoBehaviour
         if (kartu.KartuDipilih == true)
         {
             kartu.PilihKartu();
+            EfekSuaraMemilihKartu.Play();
             KartuPilihan.Add(kartu);
         }
         else
         {
             kartu.SimpanKartu();
+            EfekSuaraMelepasKartu.Play();
             KartuPilihan.Remove(kartu);
         }
 
