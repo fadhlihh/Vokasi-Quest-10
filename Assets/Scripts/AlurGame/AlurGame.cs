@@ -18,12 +18,14 @@ public class AlurGame : MonoBehaviour
     public AudioSource EfekSuaraKalah;
     public AudioSource EfekSuaraWaktuBertambah;
     public AudioSource EfekSuaraWaktuBerkurang;
+    public AudioSource MusikLatarBelakang;
 
     private void Start(){
         //Menyiapkan kartu cangkulan
         ManagerKartu.IsiCangkulan(ManagerKartu.DatabaseKartu.ListKartu);
         //Game dimulai
         Pemain.MulaiBermain();
+        EfekSuaraMenang.Pause();
     }
 
     public void KurangiWaktu(){
@@ -50,11 +52,13 @@ public class AlurGame : MonoBehaviour
     public void Menang(){
         PanelBerhasil.SetActive(true);
         EfekSuaraMenang.Play();
+        MusikLatarBelakang.Pause();
     }
 
     public void Kalah(){
         PanelKalah.SetActive(true);
         EfekSuaraKalah.Play();
+        MusikLatarBelakang.Pause();
     }
 
     public void Retry(){
