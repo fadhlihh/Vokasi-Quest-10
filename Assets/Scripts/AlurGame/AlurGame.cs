@@ -20,52 +20,61 @@ public class AlurGame : MonoBehaviour
     public AudioSource EfekSuaraWaktuBerkurang;
     public AudioSource MusikLatarBelakang;
 
-    private void Start(){
+    private void Start()
+    {
         //Menyiapkan kartu cangkulan
         ManagerKartu.IsiCangkulan(ManagerKartu.DatabaseKartu.ListKartu);
         //Game dimulai
         Pemain.MulaiBermain();
-        EfekSuaraMenang.Pause();
     }
 
-    public void KurangiWaktu(){
+    public void KurangiWaktu()
+    {
         BanyaknyaWaktu = BanyaknyaWaktu - 1;
         UpdateTextBanyaknyaWaktu();
-        if(BanyaknyaWaktu>0){
+        if (BanyaknyaWaktu > 0)
+        {
             EfekSuaraWaktuBerkurang.Play();
         }
-        if(BanyaknyaWaktu<=0){
+        if (BanyaknyaWaktu <= 0)
+        {
             Kalah();
         }
     }
 
-    public void TambahWaktu(){
+    public void TambahWaktu()
+    {
         BanyaknyaWaktu = BanyaknyaWaktu + 1;
         UpdateTextBanyaknyaWaktu();
         EfekSuaraWaktuBertambah.Play();
     }
 
-    public void UpdateTextBanyaknyaWaktu(){
+    public void UpdateTextBanyaknyaWaktu()
+    {
         TextBanyaknyaWaktu.text = BanyaknyaWaktu.ToString();
     }
 
-    public void Menang(){
+    public void Menang()
+    {
         PanelBerhasil.SetActive(true);
+        MusikLatarBelakang.Pause();
         EfekSuaraMenang.Play();
-        MusikLatarBelakang.Pause();
     }
 
-    public void Kalah(){
+    public void Kalah()
+    {
         PanelKalah.SetActive(true);
-        EfekSuaraKalah.Play();
         MusikLatarBelakang.Pause();
+        EfekSuaraKalah.Play();
     }
 
-    public void Retry(){
+    public void Retry()
+    {
         SceneManager.LoadScene("Game");
     }
 
-    public void MenuUtama(){
+    public void MenuUtama()
+    {
         SceneManager.LoadScene("MenuUtama");
     }
 
