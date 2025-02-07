@@ -25,7 +25,6 @@ public class AlurGame : MonoBehaviour
         ManagerKartu.IsiCangkulan(ManagerKartu.DatabaseKartu.ListKartu);
         //Game dimulai
         Pemain.MulaiBermain();
-        EfekSuaraMenang.Pause();
     }
 
     public void KurangiWaktu(){
